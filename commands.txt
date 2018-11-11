@@ -1,0 +1,228 @@
+sd(c(5, 1, 2))
+which.min(c(1, 3, 4))
+which.min(c(4,1,6))
+sd(c(5, 8, 12))
+32 + 4
+2^220
+sqrt(2)
+abs(-24)
+abs(24)
+?abs
+MinusFive = -5
+MinusFive
+ls
+ls()
+c(1,2,3,4,5)
+seq(0, 10, 1)
+WHO = read.csv("WHO.csv")
+getwd()
+getcwd()
+cwd
+pwd
+setwd('E:\\msit\\IT\\second year\\specialization\\learning\\wiki')
+data = read.csv('datasets/stats202log.txt')
+data = read.csv('datasets/stats202log.txt', header = F, sep = ' ', na.strings = '-')
+View(data)
+View(data)
+data = read.csv('datasets/stats202log.txt', header = F, sep = ' \t', na.strings = '-')
+data = read.csv('datasets/stats202log.txt', header = F, sep = '\t', na.strings = '-')
+sam <- sample(seq(nrow(data)), 10, replace = T)
+ans <- data[sam, 7]
+mean(ans)
+mean(data[,7])
+data$V7
+str(data)
+#
+#
+#
+# ICE 5
+true_mean = mean(data[, 7])
+differences = rep(0, 10000)
+for (i in 1:10000) {
+sam = sample(seq(nrow(data)), 10, replace = T)
+}
+for (i in 1:10000) {
+sam = sample(seq(nrow(data)), 10, replace = T)
+ans = data[sam, 7]
+differences[i] = abs(mean(ans), true_mean)
+}
+for (i in 1:10000) {
+sam = sample(seq(nrow(data)), 10, replace = T)
+ans = data[sam, 7]
+differences[i] = abs(mean(ans) - true_mean)
+}
+mean(differences)
+savehistory("E:/msit/IT/second year/specialization/learning/wiki/commands.txt")
+#
+# ICE 6
+for (i in 1:10000) {
+sam = sample(seq(nrow(data)), 100, replace = T)
+ans = data[sam, 7]
+differences[i] = abs(mean(ans) - true_mean)
+}
+mean(differences)
+#
+# ICE 7
+scores = read.csv('datasets/exam_scores.csv', header = F)
+hist(scores, breaks = seq(120, 200, by = 10), xlab = "Scores", ylab = "Frequencies", main = "Exam score frequencies")
+hist(scores[,1], breaks = seq(120, 200, by = 10), xlab = "Scores", ylab = "Frequencies", main = "Exam score frequencies")
+savehistory("E:/msit/IT/second year/specialization/learning/wiki/commands.txt")
+#
+# ICE 8
+my_hist = hist(scores[,1], breaks = seq(120, 200, by = 10),  plot = F)
+counts = my_hist$counts
+breaks = my_hist$breaks
+plot(c(115, breaks + 5), c(0, counts, 0), pch = 19, xlab = "Exam scores", ylab = "Frequency", main = "Scores Frequency Polygon")
+lines(c(115, breaks + 5), c(0, counts, 0))
+#
+# ICE 9
+plot(ecdf(scores[,1]), )
+plot(ecdf(scores[,1]),
+verticals = F,
+do.p = T,
+xlab = "Exam Scores",
+ylab = "Cumulative Percentages",
+main = "Exam score ECDF")
+plot(ecdf(scores[,1]),
+verticals = F,
+do.p = F,
+xlab = "Exam Scores",
+ylab = "Cumulative Percentages",
+main = "Exam score ECDF")
+plot(ecdf(scores[,1]),
+verticals = T,
+do.p = T,
+xlab = "Exam Scores",
+ylab = "Cumulative Percentages",
+main = "Exam score ECDF")
+?par
+par(mfrow=c(1,2))
+plot(ecdf(scores[,1]),
+verticals = T,
+do.p = T,
+xlab = "Exam Scores",
+ylab = "Cumulative Percentages",
+main = "Exam score ECDF")
+plot(ecdf(scores[,1]),
+verticals = T,
+do.p = F,
+xlab = "Exam Scores",
+ylab = "Cumulative Percentages",
+main = "Exam score ECDF")
+par(mfrow=c(1,1))
+plot(ecdf(scores[,1]),
+verticals = T,
+do.p = F,
+xlab = "Exam Scores",
+ylab = "Cumulative Percentages",
+main = "Exam score ECDF")
+savehistory("E:/msit/IT/second year/specialization/learning/wiki/commands.txt")
+#
+##
+###
+# Assignment 1 - Question 5
+# a
+data = read.csv('datasets/onemillion.csv')
+data = read.csv('datasets/onemillion.csv', header = F)
+sam = sample(seq(nrow(data)), 10000, replace = T)
+my_sample = data[sam, 1]
+str(my_sample)
+#
+# b
+sample_mean = mean(my_sample)
+sample_max = max(my_sample)
+sample_var = var(my_sample)
+?quantile
+sample_quantile = quantile(my_sample, 0.25)
+sample_mean
+sample_max
+sample_var
+sample_quantile
+#
+# c
+true_mean = mean(data)
+true_mean = mean(data[,1])
+true_mean
+true_max = max(data[,1])
+true_max
+true_var = var(data[,1])
+true_var
+true_quantile = quantile(data[,1], 0.25)
+true_quantile
+?write.csv
+write.csv(my_sample, file = "datasets/onemillion_sample.csv", sep = ",")
+write.csv(my_sample, file = "datasets/onemillion_sample.csv")
+my_sample[,1]
+my_sample[1]
+write.csv(my_sample, file = "datasets/onemillion_sample.csv", col.names = F)
+write.csv(my_sample, file = "datasets/onemillion_sample.csv", col.names = F)
+savehistory("E:/msit/IT/second year/specialization/learning/wiki/commands.txt")
+#########
+#########
+# ICE 10
+more_scores = read.csv('datasets/more_exam_scores.csv', header = F)
+View(more_scores)
+View(more_scores)
+my_new_hist<- hist(more_scores[,1], breaks=seq(100,200,by=10),plot=FALSE)
+new_counts<-my_new_hist$counts
+new_breaks<-my_new_hist$breaks
+plot(c(95,new_breaks+5),c(0,new_counts/37,0),
+pch=19,xlab="Exam Scores",
+ylab="Relative Frequency",main="Relative
+Frequency Polygons",ylim=c(0,.30))
+?lines
+lines(c(95,new_breaks+5),c(0,new_counts/37,0),
+lty=4)
+points(c(115,breaks+5),c(0,counts/40,0),
+col="blue",pch=19)
+lines(c(115,breaks+5),c(0,counts/40,0),
+col="blue",lty=1)
+legend(110,.25,c("Exam 2","Exam 1"),
+col=c("black","blue"),lty=c(4,1),pch=19)
+######
+# ICE 11
+plot(ecdf(scores[,1]),
+verticals= TRUE,do.p = FALSE,
+main ="ECDF for Exam Scores",
+xlab="Exam Scores",
+ylab="Cumulative Percent",
+xlim=c(100,200))
+lines(ecdf(more_scores[,1]),
+verticals= TRUE,do.p = FALSE,
+col.h="red",col.v="red",lwd=4)
+legend(110,.6,c("Exam 1","Exam 2"),
+col=c("black","red"),lwd=c(1,4))
+######
+# ICE 13
+data = read.csv('datasets/exams_and_names.csv')
+plot(data$Exam.1, data$Exam.2, xlim = c(100, 200), ylim = c(100, 200), xlab = "Exam 1", ylab = "Exam 2", pch = 19, main = "Scores for two exams")
+abline(0, 1)
+abline(c(0, 1))
+# ICE 14
+text(data$Exam.1[data$Exam.1<150],
+data$Exam.2[data$Exam.1<150],
+labels=data$Student[data$Exam.1<150],adj=1)
+#ICE 15
+data$Exam.1<-data$Exam.1+runif(40)-.5
+data$Exam.2<-data$Exam.2+runif(40)-.5
+plot(data$Exam.1, data$Exam.2, xlim = c(100, 200), ylim = c(100, 200), xlab = "Exam 1", ylab = "Exam 2", pch = 19, main = "Scores for two exams")
+abline(c(0, 1))
+text(data$Exam.1[data$Exam.1<150],
+data$Exam.2[data$Exam.1<150],
+labels=data$Student[data$Exam.1<150],adj=1)
+data<-read.csv("myfirstdata.csv",header=FALSE)
+data<-read.csv("datasets/myfirstdata.csv",header=FALSE)
+plot(data[,1])
+plot(data[,2])
+data<-read.csv("datasets/myfirstdata.csv",header=FALSE)
+plot(data[,1])
+plot(data[,2])
+######
+savehistory("E:/msit/IT/second year/specialization/learning/wiki/commands.txt")
+######
+# ICE 16
+data = read.csv('datasets/exams_and_names.csv')
+View(data)
+View(data)
+boxplot(data$Exam.1, data$Exam.2, col = 'green', main = "Exam Scores", names = c("Exam 1", "Exam 2"), ylab = "Scores")
+savehistory("E:/msit/IT/second year/specialization/learning/wiki/commands.txt")

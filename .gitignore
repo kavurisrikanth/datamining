@@ -1,3 +1,9 @@
 wiki.Rproj
 .Rproj.user
 *.rar
+*.docx
+resources
+PPTsMease
+.RData
+.Rhistory
+~*
